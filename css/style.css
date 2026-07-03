@@ -1,0 +1,331 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: 'Hiragino Kaku Gothic ProN', 'Noto Sans JP', sans-serif;
+    color: #333;
+    line-height: 1.7;
+  }
+  
+  /* ヘッダー */
+  header {
+    background: #fff;
+    border-bottom: 2px solid #e8a020;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  
+  .header-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 16px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo {
+    font-size: 20px;
+    font-weight: 700;
+    color: #e8a020;
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: #333;
+    margin-left: 24px;
+    font-size: 14px;
+    font-weight: 500;
+  }
+  
+  nav a:hover {
+    color: #e8a020;
+  }
+  
+  /* ===== CSSのみのスライドショー ===== */
+  .slideshow {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .slides {
+    display: flex;
+    width: 300%;
+    animation: slide 9s infinite;
+  }
+  
+  .slide {
+    width: 100vw;
+    height: 500px;
+    background-size: cover;
+    background-position: center;
+    flex-shrink: 0;
+  }
+  
+  #slide1 { background-image: url('../images/2031981_m.jpg'); }
+  #slide2 { background-image: url('../images/3590326_s.jpg'); }
+  #slide3 { background-image: url('../images/32230000_m.jpg'); }
+  
+  @keyframes slide {
+    0%   { transform: translateX(0); }
+    30%  { transform: translateX(0); }
+    33%  { transform: translateX(-33.333%); }
+    63%  { transform: translateX(-33.333%); }
+    66%  { transform: translateX(-66.666%); }
+    96%  { transform: translateX(-66.666%); }
+    100% { transform: translateX(0); }
+  }
+  
+  /* サービス紹介 */
+  .intro {
+    max-width: 800px;
+    margin: 64px auto;
+    padding: 0 24px;
+    text-align: center;
+  }
+  
+  .intro h1 {
+    font-size: 28px;
+    color: #e8a020;
+    margin-bottom: 20px;
+    line-height: 1.5;
+  }
+  
+  .intro p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 32px;
+  }
+  
+  .btn {
+    display: inline-block;
+    background: #e8a020;
+    color: #fff;
+    padding: 14px 40px;
+    border-radius: 999px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 16px;
+    transition: background 0.2s;
+  }
+  
+  .btn:hover {
+    background: #c88010;
+  }
+  
+  /* サイト説明 */
+  .about {
+    background: #fdf8f0;
+    padding: 64px 24px;
+  }
+  
+  .about h2 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 16px;
+    color: #333;
+  }
+  
+  .about > p {
+    text-align: center;
+    color: #555;
+    margin-bottom: 40px;
+  }
+  
+  .features {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+  }
+  
+  .feature {
+    background: #fff;
+    border-radius: 12px;
+    padding: 28px 24px;
+    flex: 1;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  }
+  
+  .feature h3 {
+    font-size: 16px;
+    color: #e8a020;
+    margin-bottom: 10px;
+  }
+  
+  .feature p {
+    font-size: 14px;
+    color: #666;
+  }
+
+  main {
+    min-height: 600px;
+  }
+  
+  /* FAQ */
+  .faq {
+    max-width: 800px;
+    margin: 64px auto;
+    padding: 0 24px;
+  }
+  
+  .faq h2 {
+    font-size: 24px;
+    margin-bottom: 32px;
+    text-align: center;
+  }
+  
+  .faq-item {
+    border-left: 4px solid #e8a020;
+    padding: 16px 20px;
+    margin-bottom: 20px;
+    background: #fdf8f0;
+    border-radius: 0 8px 8px 0;
+  }
+  
+  .question {
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: #333;
+  }
+  
+  .answer {
+    color: #555;
+  }
+  
+  /* フッター */
+  footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 24px;
+    font-size: 13px;
+  }
+
+  /* 特集ヒーロー */
+.feature-hero {
+    background: #fdf8f0;
+    text-align: center;
+    padding: 48px 24px;
+    border-bottom: 2px solid #e8a020;
+  }
+  
+  .feature-hero h1 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 8px;
+  }
+  
+  .feature-hero p {
+    color: #777;
+    font-size: 15px;
+  }
+  
+  /* 投稿グリッド */
+  .posts {
+    max-width: 1200px;
+    margin: 48px auto;
+    padding: 0 24px;
+  }
+  
+  .post-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+  
+  /* 投稿カード */
+  .post-card {
+    text-decoration: none;
+    color: inherit;
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    transition: transform 0.2s, box-shadow 0.2s;
+    display: block;
+  }
+  
+  .post-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+  }
+  
+  .post-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .post-body {
+    padding: 16px;
+  }
+  
+  .post-cat {
+    display: inline-block;
+    background: #fdf0d0;
+    color: #e8a020;
+    font-size: 12px;
+    padding: 2px 10px;
+    border-radius: 999px;
+    margin-bottom: 8px;
+    font-weight: 600;
+  }
+  
+  .post-body h2 {
+    font-size: 16px;
+    margin-bottom: 8px;
+    line-height: 1.5;
+  }
+  
+  .post-text {
+    font-size: 13px;
+    color: #666;
+    margin-bottom: 12px;
+    line-height: 1.6;
+  }
+  
+  .post-meta {
+    display: flex;
+    gap: 12px;
+    font-size: 13px;
+    color: #999;
+  }
+  
+  /* スマホ: 1列 */
+  @media (max-width: 768px) {
+    .post-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .feature-hero h1 {
+      font-size: 22px;
+    }
+  }
+  
+  /* ===== レスポンシブ ===== */
+  @media (max-width: 768px) {
+    .slide {
+      height: 250px;
+    }
+  
+    .intro h1 {
+      font-size: 20px;
+    }
+  
+    .features {
+      flex-direction: column;
+    }
+  
+    nav a {
+      margin-left: 12px;
+      font-size: 12px;
+    }
+  }
